@@ -89,7 +89,7 @@
                     <span><span class='cart_tit'>皮鞋</span><sapn class="y_price">￥30</sapn><sapn class="price">原价：￥30</sapn></span>
                     <div class='box_r'>
                         <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp"></div>
+                        <div class="box_r_c"><input class="box_inp" value="0"></div>
                         <div class="box_r_r ion-plus-round"></div>
                     </div>
                 </li>
@@ -97,7 +97,7 @@
                     <span><span class='cart_tit'>皮鞋</span><sapn class="y_price">￥30</sapn><sapn class="price">原价：￥30</sapn></span>
                     <div class='box_r'>
                         <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp"></div>
+                        <div class="box_r_c"><input class="box_inp" value="0"></div>
                         <div class="box_r_r ion-plus-round"></div>
                     </div>
                 </li>
@@ -105,7 +105,7 @@
                     <span><span class='cart_tit'>皮鞋</span><sapn class="y_price">￥30</sapn><sapn class="price">原价：￥30</sapn></span>
                     <div class='box_r'>
                         <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp"></div>
+                        <div class="box_r_c"><input class="box_inp" value="0"></div>
                         <div class="box_r_r ion-plus-round"></div>
                     </div>
                 </li>
@@ -113,7 +113,7 @@
                     <span><span class='cart_tit'>皮鞋</span><sapn class="y_price">￥30</sapn><sapn class="price">原价：￥30</sapn></span>
                     <div class='box_r'>
                         <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp"></div>
+                        <div class="box_r_c"><input class="box_inp" value="0"></div>
                         <div class="box_r_r ion-plus-round"></div>
                     </div>
                 </li>
@@ -121,7 +121,7 @@
                     <span><span class='cart_tit'>皮鞋</span><sapn class="y_price">￥30</sapn><sapn class="price">原价：￥30</sapn></span>
                     <div class='box_r'>
                         <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp"></div>
+                        <div class="box_r_c"><input class="box_inp" value="0"></div>
                         <div class="box_r_r ion-plus-round"></div>
                     </div>
                 </li>
@@ -129,7 +129,7 @@
                     <span><span class='cart_tit'>皮鞋</span><sapn class="y_price">￥30</sapn><sapn class="price">原价：￥30</sapn></span>
                     <div class='box_r'>
                         <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp"></div>
+                        <div class="box_r_c"><input class="box_inp" value="0"></div>
                         <div class="box_r_r ion-plus-round"></div>
                     </div>
                 </li>
@@ -180,6 +180,22 @@
         <i class="icon ion-ios-person"></i>我的
     </a>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $('.box_r_l').click(function(){
+            var count = $(this).parent().find('.box_inp').val();
+            if(count>0){
+                count = parseInt($(this).parent().find('.box_inp').val())-1;
+                $(this).parent().find('.box_inp').val(count)
+            }
+        })
+        $('.box_r_r').click(function(){
+            var count = $(this).parent().find('.box_inp').val();
+                 count = parseInt($(this).parent().find('.box_inp').val()) + 1;
+                 $(this).parent().find('.box_inp').val(count)
 
+        })
+    })
+</script>
 </body>
 </html>

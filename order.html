@@ -80,7 +80,7 @@
 <ion-content  class="scroll-content  scroll-content ionic-scroll has-header has-footer start_content_product ">
     <!-- 本例主要代码 Start ================================ -->
 
-    <ul class="list">
+    <ul class="list" id="kv_ul">
         <li class="item kv_item-thumbnail-left">
             <a href="#">
             <img src="images/pic_1.jpg">
@@ -179,6 +179,46 @@
         <i class="icon ion-ios-person"></i>我的
     </a>
 </div>
+<div class="kv_box" id="kv_tc_box" style="display: none">
+    <div class="kv_tc">
+        <ul class="list" id="kv_tc_ul">
+        <li class="item kv_item-thumbnail-left">
+            <a href="#">
+                <img src="images/pic_1.jpg">
+                <h2>大黄鸭在北京两个月创收超两亿元 今日离京</h2>
+                <p class="price" style="font-size: 14px">￥120</p>
+                <div class='box_r' style="float: left; margin-left: 10px;">
+                    <div class="box_r_l ion-minus-round"></div>
+                    <div class="box_r_c"><input class="box_inp" value="0"></div>
+                    <div class="box_r_r ion-plus-round"></div>
+                </div>
+                <p class="price" style="width: 100px; float: left; margin:17px 0 0 10px; font-size: 12px;">总计：￥120</p>
+            </a>
+        </li>
+        </ul>
+        <div class="tc_btn" href="#">提交</div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('#kv_ul').find('li').click(function(){
+            $('#kv_tc_box').css('display','block')
+        })
+        $('.tc_btn').click(function(){
+            $('#kv_tc_box').css('display','none')
+        })
+        $('.box_r_l').click(function(){
+            if($('.box_inp').val()>0){
+            var count = parseInt($('.box_inp').val())-1;
+            $('.box_inp').val(count)
+            }
+        })
+        $('.box_r_r').click(function(){
+                var count = parseInt($('.box_inp').val()) + 1;
+                $('.box_inp').val(count)
 
+        })
+    })
+</script>
 </body>
 </html>

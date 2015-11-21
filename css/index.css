@@ -443,3 +443,40 @@ p.price{
 .kv_pop ion-header-bar{
     display: none;
 }
+.kv_box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+}
+.kv_tc{
+    width: 90%;
+    height: 260px;
+    margin: 140px auto 0 auto;
+    background: #fff;
+    border-radius: 6px;
+}
+#kv_tc_ul .item {
+    background: none;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px;
+    border-style: none;
+}
+.kv_tc>div.tc_btn{
+    line-height: 40px;
+    height: 40px;
+    width: 80%;
+    text-align: center;
+    background: #E33113;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+ul#kv_tc_ul{
+    margin-bottom: 0;
+}
