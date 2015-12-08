@@ -73,11 +73,11 @@
 <body ng-controller="MyCtrl">
 
 <div class="bar bar-header bar-positive">
-    <a class="icon ion-android-menu kv_ion-android-menu"></a>
+    <a href="javascript:history.go(-1);" title="kv" class="icon ion-ios-arrow-back kv_ion-android-menu"></a>
     <h1 class="title">小猪洗鞋</h1>
     <a class="icon ion-android-share-alt kv_ion-ios-cart"></a>
 </div>
-<div class="tabs tabs-top tabs-stable product-background">专业洗鞋服务，5-7天送回</div>
+<div class="tabs tabs-top tabs-stable product-background">专业洗鞋服务，72小时内送回</div>
 <div class="tabs kv_tabs tabs-top tabs-stable" style="top:92px;">
     <a class="tab-item kv_tabs kv_tabs_active" href="product.html">清洗护理</a>
     <a class="tab-item" href="product2.html">修复翻新</a>
@@ -172,19 +172,20 @@
 </ion-content>
 
 <div class="tabs tabs-stable tabs-icon-top">
-    <a class="tab-item active positive">
+    <a href="index.html" class="tab-item" href='index.html'>
         <i class="icon ion-android-home"></i>首页
     </a>
-    <a class="tab-item">
-        <i class="icon ion-document-text"></i>订单
+    <a href="order_list.html" class="tab-item">
+        <i class="icon ion-document-text" href='order.html'></i>订单
     </a>
-    <a class="tab-item">
-        <i class="icon ion-ios-cart"></i>购物车
+    <a href="shoppingCart.html" class="tab-item">
+        <i class="icon ion-ios-cart" href='shoppingCart.html'></i>购物车
     </a>
-    <a class="tab-item">
-        <i class="icon ion-ios-person"></i>我的
+    <a href="personal.html" class="tab-item">
+        <i class="icon ion-ios-person" href='personal.html'></i>我的
     </a>
 </div>
+
 <div class="kv_box" id="kv_tc_box" style="display: none">
     <div class="kv_tc">
         <ul class="list" id="kv_tc_ul">
@@ -202,7 +203,10 @@
             </a>
         </li>
         </ul>
-        <div class="tc_btn" href="#">提交</div>
+        <div class="btn_box">
+        <div class="tc_btn_l" href="#">添加购物车</div>
+        <div class="tc_btn_r" href="#">提交</div>
+        </div>
     </div>
 </div>
 <script type="text/javascript">
@@ -210,7 +214,7 @@
         $('#kv_ul').find('li').click(function(){
             $('#kv_tc_box').css('display','block')
         })
-        $('.tc_btn').click(function(){
+        $('.btn_box').find('div').click(function(){
             $('#kv_tc_box').css('display','none')
         })
         $('.box_r_l').click(function(){

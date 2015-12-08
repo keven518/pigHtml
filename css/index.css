@@ -326,7 +326,7 @@ ul.cart_main li{
 .kv-ion-ios-location-outline{
     font-size: 22px;
     padding-top: 4px;
-    color: #ffbd14;
+    color: #30B55C;
 }
 .kv-ion-document-text{
     font-size: 22px;
@@ -348,6 +348,14 @@ ul.cart_main li{
     font-size: 22px;
     color: #F7AD2A;
 
+}
+.kv-ion-ios-paper{
+    font-size: 22px;
+    color: #F7AD2A;
+}
+.kv-ion-coffee{
+    font-size: 22px;
+    color: #52C7C1;
 }
 .kv-icon{
     display: inline-block;
@@ -480,15 +488,36 @@ p.price{
     padding: 16px;
     border-style: none;
 }
-.kv_tc>div.tc_btn{
+.kv_tc>div.btn_box{
     line-height: 40px;
     height: 40px;
     width: 80%;
     text-align: center;
-    background: #E33113;
     color: #fff;
     display: block;
     margin: 0 auto;
+    border-radius: 4px;
+}
+div.btn_box>div.tc_btn_r{
+    line-height: 40px;
+    height: 40px;
+    width: 40%;
+    text-align: center;
+    background: #E33113;
+    color: #fff;
+    display: block;
+    float: right;
+    border-radius: 4px;
+}
+div.btn_box>div.tc_btn_l{
+    line-height: 40px;
+    height: 40px;
+    width: 40%;
+    text-align: center;
+    background: #FFC900;
+    color: #fff;
+    display: block;
+    float: left;
     border-radius: 4px;
 }
 ul#kv_tc_ul{
@@ -577,4 +606,35 @@ a.kv_ion-android-menu:before,a.kv_ion-ios-search-strong:before,a.kv_ion-ios-cart
     font-family: '微软雅黑';
     background: #fff;
     border-bottom: 1px #387EF5 solid;
+}
+
+.bar.bar-positive .title{
+    font-family: '微软雅黑';
+}
+.bar a.kv_ion-android-menu{
+    width: 20px;
+    display: block;
+    z-index: 100;
+}
+
+.cz_tip{
+    display: inline-block;
+    margin-left: 10px;
+    height: 20px;
+    line-height: 20px;
+    box-sizing: content-box;
+    padding: 0 8px;
+    font-size: 12px;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;
+}
+.item-radio .radio-icon.kv_radio_icon{
+    display: block;
+}
+.cz_tip_r{
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    color: #886aea;
 }

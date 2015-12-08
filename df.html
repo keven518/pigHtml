@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height">
     <script src="js/ionic.bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="css/ionic.css">
+    <link rel="stylesheet" type="text/css" href="css/ionic.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <link rel="stylesheet" href="css/jquery.spinner.css" />
@@ -56,6 +57,47 @@
     .focus .bd li img{ width:100%;  height:200px; background:url(images/loading.gif) center center no-repeat;  }
     .focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
 
+    .has-header {
+        top: 22px;
+    }
+
+    .sAddress_row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+         padding: 0;
+        width: 100%;
+        height: 59px;
+    }
+
+    .sAddress_col {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    .sAddress_col .item-select {
+        height: 59px;
+    }
+
+    .sAddress_col .item-select select{
+        max-width: 100%;
+        padding: 0 30px 0 10px;
+    }
+    .item-select option {
+        min-height:40px;
+        line-height: 40px;
+    }
+
 </style>
 <script type="text/javascript">
     angular.module('ionicApp', ['ionic'])
@@ -76,47 +118,60 @@
 
 <ion-content  class="scroll-content  scroll-content ionic-scroll has-header has-footer start_content_product ">
     <!-- 本例主要代码 Start ================================ -->
-    <div class="per_box">
-        <img src="images/3mv.jpg" />
-        <h2>白晶晶</h2>
-        <p>Tel:1237335865</p>
+    <div class="content has-header">
+        <div class="list">
+        
+
+            <label class="item item-radio">
+                <input type="radio" name="group" value="go" checked="checked">
+                <div class="item-content">
+                    ￥200.00<span class="cz_tip">￥300.00</span>
+                    <span class="cz_tip_r">送￥100</span>
+                </div>
+                <i class="radio-icon ion-checkmark kv_radio_icon"></i>
+            </label>
+
+            <label class="item item-radio">
+                <input type="radio" name="group" value="python">
+                <div class="item-content">
+                    ￥300.00<span class="cz_tip">￥450.00</span>
+                    <span class="cz_tip_r">送￥100</span>
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+
+            <label class="item item-radio">
+                <input type="radio" name="group" value="ruby">
+                <div class="item-content">
+                    ￥400.00<span class="cz_tip">￥600.00</span>
+                    <span class="cz_tip_r">送￥100</span>
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+
+            <label class="item item-radio">
+                <input type="radio" name="group" value=".net">
+                <div class="item-content">
+                    ￥500.00<span class="cz_tip">￥800.00</span>
+                    <span class="cz_tip_r">送￥100</span>
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+
+            <label class="item item-radio">
+                <input type="radio" name="group" value="java">
+                <div class="item-content">
+                    ￥600.00<span class="cz_tip">￥10300.00</span>
+                    <span class="cz_tip_r">送￥100</span>
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+
+        </div>
+        <div class="padding">
+            <button class="button button-block button-positive">充值</button>
+        </div>
     </div>
-
-    <ul class="cart_main">
-                <li>
-                    <span class='cart_icon'><span class="kv-icon"><i class="kv-ion-document-text ion-document-text"></i></span></span>
-                    <span><span class='cart_tit'>我的订单</span></span>
-                </li>
-
-        <li>
-            <span class='cart_icon'><span class="kv-icon"><i class="icon kv-ion-ios-paper ion-ios-paper"></i></span></span>
-            <span><span class='cart_tit'>余款</span><sapn class="price_red">￥30</sapn></span>
-            <div class='box_r2'>
-                <span class="btn_red">充值</span>
-            </div>
-        </li>
-        <li>
-            <span class='cart_icon'><span class="kv-icon"><i class="icon kv-ion-ios-location-outline ion-ios-location-outline"></i></span></span>
-            <span><span class='cart_tit'>派件地址</span></span>
-        </li>
-        <li>
-            <span class='cart_icon'><span class="kv-icon"><i class="icon kv-ion-ios-color-filter ion-ios-color-filter"></i></span></span>
-            <span><span class='cart_tit'>关于</span></span>
-        </li>
-        <li>
-            <span class='cart_icon'><span class="kv-icon"><i class="icon kv-ion-ios-bookmarks ion-ios-bookmarks"></i></span></span>
-            <span><span class='cart_tit'>我的红包</span></span>
-        </li>
-        <li>
-            <span class='cart_icon'><span class="kv-icon"><i class="icon kv-ion-ios-pricetag ion-ios-pricetag"></i></span></span>
-            <span><span class='cart_tit'>我的礼券</span></span>
-        </li>
-        <li>
-            <span class='cart_icon'><span class="kv-icon"><i class="icon kv-ion-coffee ion-coffee"></i></span></span>
-            <span><span class='cart_tit'>我的积分</span></span>
-        </li>
-
-    </ul>
 
 </ion-content>
 

@@ -68,7 +68,7 @@
 <body ng-controller="MyCtrl">
 
 <div class="bar bar-header bar-positive">
-    <a class="icon ion-android-menu kv_ion-android-menu"></a>
+    <a href="javascript:history.go(-1);" class="icon ion-ios-arrow-back kv_ion-android-menu"></a>
     <h1 class="title">小猪洗鞋</h1>
     <a class="icon ion-android-share-alt kv_ion-ios-cart"></a>
 </div>
@@ -232,17 +232,17 @@
 </ion-content>
 
 <div class="tabs tabs-stable tabs-icon-top">
-    <a class="tab-item active positive">
+    <a href="index.html" class="tab-item">
         <i class="icon ion-android-home"></i>首页
     </a>
-    <a class="tab-item">
-        <i class="icon ion-document-text"></i>订单
+    <a href="order_list.html" class="tab-item active positive">
+        <i class="icon ion-document-text" href='order.html'></i>订单
     </a>
-    <a class="tab-item">
-        <i class="icon ion-ios-cart"></i>购物车
+    <a href="shoppingCart.html" class="tab-item">
+        <i class="icon ion-ios-cart" href='shoppingCart.html'></i>购物车
     </a>
-    <a class="tab-item">
-        <i class="icon ion-ios-person"></i>我的
+    <a href="personal.html" class="tab-item">
+        <i class="icon ion-ios-person" href='personal.html'></i>我的
     </a>
 </div>
 
