@@ -167,6 +167,9 @@ ul.cart_main li{
     padding-right: 10px;
     font-size: 14px;
 }
+.y_price{
+    margin-top: 6px;
+}
 .price{
     color: #2ebe80;
     padding-right: 10px;
@@ -401,7 +404,7 @@ ul.cart_main li{
     padding:  10px 0 0 10px;
     overflow: hidden;
     line-height: 24px;
-    height: 48px;
+    height: 30px;
     box-sizing: content-box;
     white-space: pre-wrap;
 }
@@ -637,4 +640,14 @@ a.kv_ion-android-menu:before,a.kv_ion-ios-search-strong:before,a.kv_ion-ios-cart
     float: right;
     font-size: 14px;
     color: #886aea;
+}
+
+span.pro_info{
+    line-height: 24px;
+    display: block;
+    height: 50px;
+    font-size: 14px;
+    color: #999;
+    padding: 0 0 0 140px;
+    white-space: pre;
 }
