@@ -31,7 +31,7 @@ body,h2,div,a{
 .kv_index_f1_btn2{
     height: 90px;
     float: right;
-    background: #fdb53f;
+    background: url("../images/2bg.jpg") repeat;
     border-radius: 6px;
 }
 .kv_index_f1_btn3{
@@ -542,14 +542,14 @@ a.kv_ion-android-menu:before,a.kv_ion-ios-search-strong:before,a.kv_ion-ios-cart
     color: #fff;
 }
 .e_box {
-    padding: 20px 0;
     height: 100px;
 }
 .e_box_c{
-    width: 50%;
+    width: 49%;
     display: block;
     box-sizing: border-box;
     padding-left: 14px;
+    float: left;
 }
 .e_box_c img{
     float: left;

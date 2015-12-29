@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height">
     <script src="js/ionic.bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/ionic.css">
+    <link rel="stylesheet" type="text/css" href="css/ionic.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <link rel="stylesheet" href="css/jquery.spinner.css" />
     <script src="js/app.js"></script>
-    <title>订单列表</title>
-
+    <title></title>
 </head>
 
 <script src="js/kvSlide.1.1.js"></script>
@@ -59,7 +58,27 @@
     .focus .bd{ position:relative; z-index:0; }
     .focus .bd li img{ width:100%;  height:200px; background:url(images/loading.gif) center center no-repeat;  }
     .focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
-
+    .dz_box{
+        padding: 10px 0 10px 20px;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px #eee solid;
+    }
+    .dz_box_tit{
+        width: 20%;
+        line-height: 40px;
+        height: 40px;
+        font-size: 18px;
+        float: left;
+    }
+    .dz_box_txt{
+        width: 80%;
+        float: left;
+        text-align: left;
+        padding: 0 10px 0 10px;
+        line-height: 30px;
+        font-size: 16px;
+    }
 </style>
 <script type="text/javascript">
     angular.module('ionicApp', ['ionic'])
@@ -72,129 +91,89 @@
 </script>
 <body ng-controller="MyCtrl">
 
+
 <div class="bar bar-header bar-positive">
     <a href="javascript:history.go(-1);" class="icon ion-ios-arrow-back kv_ion-android-menu"></a>
     <h1 class="title">小猪洗鞋</h1>
     <a class="icon ion-android-share-alt kv_ion-ios-cart"></a>
 </div>
-<div class="tabs tabs-top tabs-stable product-background">专业洗包服务，72小时内送回</div>
-<div class="tabs kv_tabs tabs-top tabs-stable" style="top:92px;">
-    <a class="tab-item kv_tabs kv_tabs_active" href="product2_i.html">清洗护理</a>
-    <a class="tab-item" href="product2.html">修复翻新</a>
-</div>
 
-<ion-content  class="scroll-content  scroll-content ionic-scroll product_has-header has-footer start_content_product ">
+<ion-content  class="scroll-content  scroll-content ionic-scroll has-header has-footer start_content_product " style="padding-bottom: 60px;">
     <!-- 本例主要代码 Start ================================ -->
-
-    <ul class="list" id="kv_ul">
-        <li class="item kv_item-thumbnail-left">
-            <a href="#">
-            <img src="images/ysb2.jpg">
-            <h2>钱包/卡包/钥匙包</h2>
-            <span class="pro_info">【钱包/卡包/钥匙包】专业修复、翻新，厦门岛内免费上门取送</span>
-            <p class="y_price">￥120</p>
-            <p class="price">￥80</p>
-            <div class="pro_btn"><i class="icon ion-ios-cart"></i></div>
-            </a>
-        </li>
-        <li class="item kv_item-thumbnail-left">
-            <a href="#">
-                <img src="images/sbao2.jpg">
-                <h2>手包</h2>
-                <span class="pro_info">【手包】专业修复、翻新，厦门岛内免费上门取送</span>
-                <p class="y_price">￥120</p>
-                <p class="price">￥95</p>
-                <div class="pro_btn"><i class="icon ion-ios-cart"></i></div>
-            </a>
-        </li>
-        <li class="item kv_item-thumbnail-left">
-            <a href="#">
-                <img src="images/sjstb.jpg">
-                <h2>单肩手提包</h2>
-                <span class="pro_info">【单肩手提包】专业修复、翻新，厦门岛内免费上门取送</span>
-                <p class="y_price">￥120</p>
-                <p class="price">￥150</p>
-                <div class="pro_btn"><i class="icon ion-ios-cart"></i></div>
-            </a>
-        </li>
-        <li class="item kv_item-thumbnail-left">
-            <a href="#">
-                <img src="images/sjb3.jpg">
-                <h2>挎包/双肩包</h2>
-                <span class="pro_info">【挎包/双肩包】专业修复、翻新，厦门岛内免费上门取送</span>
-                <p class="y_price">￥120</p>
-                <p class="price">￥200</p>
-                <div class="pro_btn"><i class="icon ion-ios-cart"></i></div>
-            </a>
-        </li>
-    </ul>
-    <div class="button-bar bar-positive" style="width: 90%; margin: 0 auto 20px auto;">
-        <a class="button"><i class="ion-chevron-left" href='order.html'></i></a>
-        <div class="button">第22页</div>
-        <a class="button"><i class="ion-chevron-right" href='order.html'></i></a>
+    <div class="per_box">
+        <img src="images/3mv.jpg" />
+        <h2>白晶晶</h2>
+        <p>Tel:1237335865</p>
     </div>
+
+    <ul class="cart_main">
+                <li>
+                    <span><span class='cart_tit'>下单日期</span></span>
+                    <span class="cart_txtr_date">2015-11-05 17:58:31</span>
+                </li>
+                <li>
+                    <span><span class='cart_tit'>用户姓名</span></span>
+                    <span class="cart_txtr_date">2015-11-05 17:58:31</span>
+                </li>
+                <li>
+                    <span><span class='cart_tit'>客户电话</span></span>
+                    <span class="cart_txtr_date">15011111111</span>
+                </li>
+    </ul>
+    <div class="dz_box">
+        <div class="dz_box_tit">地址</div>
+        <div class="dz_box_txt">北京市东城区天安门广场北侧北京市东城区天安门广场北侧</div>
+        <div class="clearfix"></div>
+    </div>
+    <ul class="cart_main">
+        <li>
+            <span>
+                <span class='cart_txt'>鞋子状态</span>
+            </span>
+            <span class="cart_txtr_date">待支付</span>
+        </li>
+        <li>
+            <span>
+                <span class='cart_txt'>鞋子进度</span>
+            </span>
+            <span class="cart_txtr_date">关闭</span>
+        </li>
+
+    </ul>
+
+    <div style="margin: 20px auto;"><a href="personal.html"><button class="button button-assertive" style="margin: 0 auto; display: block; width: 80%;">确认订单</button></a> </div>
 </ion-content>
 
 <div class="tabs tabs-stable tabs-icon-top">
-    <a href="index.html" class="tab-item" href='index.html'>
+    <a href="index.html" class="tab-item">
         <i class="icon ion-android-home"></i>首页
     </a>
     <a href="order_list.html" class="tab-item">
         <i class="icon ion-document-text" href='order.html'></i>订单
     </a>
-    <a href="shoppingCart.html" class="tab-item">
+    <a href="shoppingCart.html" class="tab-item active positive">
         <i class="icon ion-ios-cart" href='shoppingCart.html'></i>购物车
     </a>
     <a href="personal.html" class="tab-item">
         <i class="icon ion-ios-person" href='personal.html'></i>我的
     </a>
 </div>
-
-
-<div class="kv_box" id="kv_tc_box" style="display: none">
-    <div class="kv_tc">
-        <ul class="list" id="kv_tc_ul">
-            <li class="item kv_item-thumbnail-left">
-                <a href="#">
-                    <img src="images/pic_1.jpg">
-                    <h2>大黄鸭在北京两个月创收超两亿元 今日离京</h2>
-                    <p class="price" style="font-size: 14px">￥120</p>
-                    <div class='box_r' style="float: left; margin-left: 10px;">
-                        <div class="box_r_l ion-minus-round"></div>
-                        <div class="box_r_c"><input class="box_inp" value="0"></div>
-                        <div class="box_r_r ion-plus-round"></div>
-                    </div>
-                    <p class="price" style="width: 100px; float: left; margin:17px 0 0 10px; font-size: 12px;">总计：￥120</p>
-                </a>
-            </li>
-        </ul>
-        <div class="btn_box">
-            <div class="tc_btn_l" href="#">添加购物车</div>
-            <div class="tc_btn_r" href="#">提交</div>
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
     $(function(){
-        $('#kv_ul').find('li').click(function(){
-            $('#kv_tc_box').css('display','block')
-        })
-        $('.btn_box').find('div').click(function(){
-            $('#kv_tc_box').css('display','none')
-        })
         $('.box_r_l').click(function(){
-            if($('.box_inp').val()>0){
-                var count = parseInt($('.box_inp').val())-1;
-                $('.box_inp').val(count)
+            var count = $(this).parent().find('.box_inp').val();
+            if(count>0){
+                count = parseInt($(this).parent().find('.box_inp').val())-1;
+                $(this).parent().find('.box_inp').val(count)
             }
         })
         $('.box_r_r').click(function(){
-            var count = parseInt($('.box_inp').val()) + 1;
-            $('.box_inp').val(count)
+            var count = $(this).parent().find('.box_inp').val();
+                 count = parseInt($(this).parent().find('.box_inp').val()) + 1;
+                 $(this).parent().find('.box_inp').val(count)
 
         })
     })
 </script>
 </body>
-
 </html>
